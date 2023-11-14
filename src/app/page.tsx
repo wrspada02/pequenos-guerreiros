@@ -35,7 +35,7 @@ export default function Home() {
       </header>
 
       <main className='bg-gradient-primary min-h-screen'>
-        <section className='mobile:pt-40 tablet:pt-40 desktop:pt-60 fullscreen:pt-60 mobile:pb-20 mobile:px-16 tablet:px-24 desktop:px-32 fullscreen:px-40'>
+        <section className='mobile:pt-40 tablet:pt-40 desktop:pt-44 fullscreen:pt-60 mobile:pb-20 desktop:pb-20 mobile:px-16 tablet:px-24 desktop:px-32 fullscreen:px-40'>
           <article className='text-white desktop:pl-20 fullscreen:pl-20'>
             <h1 className='desktop:border-l-4 fullscreen:border-l-4 border-white border-solid font-poppins font-extrabold text-6xl desktop:pl-5 fullscreen:pl-5'>Quem somos?</h1>
             <p className='font-strait font-light text-2xl desktop:pl-7 fullscreen:pl-7 pt-5'>A associação Pequenos Guerreiros apoia e desenvolve ações para o lazer, saúde e a defesa, elevação e manutenção da qualidade de vida do ser humano, atendendo meninas e meninos entre 0 a 16 anos de idade, com qualquer tipo de Neoplasia (Câncer), portadoras de Doenças Raras, crianças em Cuidados Paliativos e com deficiências.</p>
