@@ -13,10 +13,13 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'gradient-primary': 'linear-gradient(180deg, rgba(0,137,189,1) 15%, rgba(1,149,51,0.55) 33%);',
-        'gradient-header-scrolled': 'linear-gradient(180deg, rgba(221,205,73,1) 33%, rgba(255,255,255,1) 52%, rgba(92,150,227,1) 98%)'
+        'gradient-header-scrolled': 'linear-gradient(180deg, rgba(221,205,73,1) 33%, rgba(255,255,255,1) 52%, rgba(92,150,227,1) 98%)',
+        'first-image': "url('../../public/image-1.jpg')",
+        'second-image': "url('../../public/image-2.jpg')",
       },
       backgroundColor: {
         'green-default': '#3D8D53',
+        'yellow-default': '#CDBC24',
       },
       maxWidth: {
         'logo': '10ch'
