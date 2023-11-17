@@ -30,7 +30,7 @@ export default function Home() {
             
         <button className='flex items-center justify-between gap-2 bg-white mobile:p-2 tablet:p-2 desktop:p-3 fullscreen:p-3 text-[#5C95D8] hover:opacity-50 ease-linear'>
           <Image src={'./hearth-icon.svg'} alt='Icone de coração para simular carência das crianças da Ong' width={20} height={20} />
-          <p className='uppercase font-bold font-rubik'>Ajude-nos</p>
+          <p className='uppercase font-bold font-rubik mobile:text-sm text-xl'>Ajude-nos</p>
         </button>
       </header>
 
@@ -40,7 +40,7 @@ export default function Home() {
             <div className='bg-green-default py-3 px-5 desktop:max-w-sm fullscreen:max-w-md mobile:w-full tablet:w-full mobile:text-center tablet:text-center'>
               <h1 className='desktop:border-l-4 fullscreen:border-l-4 border-white border-solid font-poppins font-bold desktop:text-6xl fullscreen:text-6xl desktop:pl-5 fullscreen:pl-5 mobile:text-2xl tablet:text-4xl'>Quem somos?</h1>
             </div>
-            <p className='font-strait font-light mobile:text-lg tablet:text-xl desktop:pl-7 fullscreen:pl-7 pt-5'>A associação Pequenos Guerreiros apoia e desenvolve ações para o lazer, saúde e a defesa, elevação e manutenção da qualidade de vida do ser humano, atendendo meninas e meninos entre 0 a 16 anos de idade, com qualquer tipo de Neoplasia (Câncer), portadoras de Doenças Raras, crianças em Cuidados Paliativos e com deficiências.</p>
+            <p className='font-strait font-light text-2xl mobile:text-lg tablet:text-xl desktop:pl-7 fullscreen:pl-7 pt-5'>A associação Pequenos Guerreiros apoia e desenvolve ações para o lazer, saúde e a defesa, elevação e manutenção da qualidade de vida do ser humano, atendendo meninas e meninos entre 0 a 16 anos de idade, com qualquer tipo de Neoplasia (Câncer), portadoras de Doenças Raras, crianças em Cuidados Paliativos e com deficiências.</p>
           </article>
           <article className='text-white pt-20'>
             <div className='bg-green-default py-3 px-5 desktop:max-w-sm fullscreen:max-w-md mobile:w-full tablet:w-full mobile:text-center tablet:text-center'>
@@ -50,25 +50,24 @@ export default function Home() {
           </article>
         </section>
 
-        <section className='grid desktop:grid-cols-3 fullscreen:grid-cols-3 mobile:grid-cols-2 tablet:grid-cols-2 mobile:grid-rows-2 tablet:grid-rows-2'>
-          <Image src={'/placeholder-image.webp'} alt='Placeholder image' className='mobile:col-start-1 mobile:col-end-1 tablet:col-start-1 tablet:col-end-1 mobile:row-start-1 mobile:row-end-1  tablet:row-start-1 tablet:row-end-1 self-cen min-w-[300px] max-w-md object-contain mobile:pt-10 tablet:pt-10' width={50} height={50} />
-          <Image src={'/placeholder-image.webp'} alt='Placeholder image' className='mobile:col-start-1 mobile:col-end-1 tablet:col-start-1 tablet:col-end-1 mobile:row-start-2 mobile:row-end-2  tablet:row-start-2 tablet:row-end-2 pt-10 mobile:pt-0 tablet:pt-0 min-w-[300px] object-contain' width={50} height={50} />
+        <section className='grid desktop:grid-cols-3 fullscreen:grid-cols-3 mobile:grid-cols-1 tablet:grid-cols-2 mobile:grid-rows-[0.5fr 1fr 0.5fr 1fr] tablet:grid-rows-[0.5fr 1fr 0.5fr 1fr] mobile:gap-y-10 tablet:gap-y-10 gap-x-5 p-10'>
+          <Image src={'/placeholder-image.png'} alt='Placeholder image' className='mobile:row-start-2 mobile:row-end-3 tablet:row-start-1 tablet:row-end-2 tablet:col-start-1 tablet:col-end-2 desktop:col-start-1 desktop:col-end-1 fullscreen:col-start-1 fullscreen:col-end-1 desktop:row-start-1 desktop:row-end-3 fullscreen:row-start-1 fullscreen:row-end-3 w-1/2 h-full object-cover desktop:self-center fullscreen:self-center m-auto' width={50} height={50} />
 
-          <section className='pt-10 mobile:px-5 tablet:px-10 px-20 mobile:col-start-2 mobile:col-end-3 tablet:col-start-2 tablet:col-end-3 mobile:row-start-1 mobile:row-end-3  tablet:row-start-1 tablet:row-end-3 mobile:flex mobile:flex-col tablet:flex tablet:flex-col pb-10'>
-            <article className='text-white mobile:flex-1 tablet:flex-1'>
-              <div className='bg-green-default p-8 mobile:p-3 tablet:p-4 max-w-sm'>
-                <h3 className='text-3xl font-semibold'>Nossa Missão</h3>
-              </div>
-              <p className='pl-5 mobile:pl-0 tablet:pl-0 pt-3 text-black'>Estamos sempre na busca da felicidade na vida dos pequenos guerreiros, trazendo brincadeiras, divertindo e buscando entretenimento e o saber</p>
-            </article>
+          <Image src={'/placeholder-image.png'} alt='Placeholder image' className='mobile:row-start-4 mobile:row-end-5 tablet:row-start-2 tablet:row-end-3 tablet:col-start-1 tablet:col-end-2 desktop:col-start-2 desktop:col-end-3 fullscreen:col-start-2 fullscreen:col-end-3 desktop:row-start-1 desktop:row-end-2 fullscreen:row-start-1 fullscreen:row-end-2 mobile:pt-0 tablet:pt-0 w-1/2 h-full object-cover m-auto' width={50} height={50} />
 
-            <article className='text-white mobile:pt-0 tablet:pt-0 pt-20 mobile:flex-1 tablet:flex-1'>
-              <div className='bg-yellow-default p-8 mobile:p-3 tablet:p-4 max-w-sm'>
-                <h3 className='text-3xl font-semibold'>O que acreditamos</h3>
-              </div>
-              <p className='pl-5 pt-3  mobile:pl-0 tablet:pl-0 text-black'>Acreditamos que o amor e o cuidado são essenciais nas relações com nossos pequenos. Além disso, a diversão e uma boa recepção são um afeto para que possamos ter um ambiente saudável e colaborativo e nossos pequenos se sintam bem.</p>
-            </article>
-          </section>
+          <article className='text-white mobile:row-start-1 mobile:row-end-2 tablet:row-start-1 tablet:row-end-2 tablet:col-start-2 tablet:col-end-3 desktop:col-start-3 desktop:col-end-4 fullscreen:col-start-3 fullscreen:col-end-4 desktop:row-start-1 desktop:row-end-2 fullscreen:row-start-1 fullscreen:row-end-2'>
+            <div className='bg-green-default p-8 mobile:p-3 tablet:p-4 max-w-sm'>
+              <h3 className='text-3xl font-semibold'>Nossa Missão</h3>
+            </div>
+            <p className='pl-5 mobile:pl-0 tablet:pl-0 pt-3 text-black text-xl mobile:text-base tablet:lg'>Estamos sempre na busca da felicidade na vida dos pequenos guerreiros, trazendo brincadeiras, divertindo e buscando entretenimento e o saber</p>
+          </article>
+
+          <article className='text-white mobile:pt-0 tablet:pt-0 pt-20 mobile:row-start-3 mobile:row-end-4 tablet:row-start-2 tablet:row-end-3 tablet:col-start-2 tablet:col-end-3 desktop:col-start-3 desktop:col-end-4 fullscreen:col-start-3 fullscreen:col-end-4 desktop:row-start-2 desktop:row-end-3 fullscreen:row-start-2 fullscreen:row-end-3'>
+            <div className='bg-yellow-default p-8 mobile:p-3 tablet:p-4 max-w-sm'>
+              <h3 className='text-3xl font-semibold'>O que acreditamos</h3>
+            </div>
+            <p className='pl-5 pt-3  mobile:pl-0 tablet:pl-0 text-black text-xl mobile:text-base tablet:lg'>Acreditamos que o amor e o cuidado são essenciais nas relações com nossos pequenos. Além disso, a diversão e uma boa recepção são um afeto para que possamos ter um ambiente saudável e colaborativo e nossos pequenos se sintam bem.</p>
+          </article>
         </section>
 
         <section className='p-10 bg-green-default'>
@@ -82,16 +81,16 @@ export default function Home() {
               <p>Logo em 2016, surgiu uma oportunidade de apadrinhar uma criança com Doença Rara, onde o projeto passou a integrar crianças portadoras de doenças raras e acolher todos familiares.</p>
               <p>E em 2019, enfim nasceu “Pequenos Guerreiros” (Associação Príncipes e Princesas da Quimioterapia e Doenças Raras), que apoia e desenvolve ações para o lazer, saúde e a defesa, elevação e manutenção da qualidade de vida do ser humano, atendendo meninas e meninos entre 0 a 16 anos de idade, com qualquer tipo de Neoplasia (Câncer), portadoras de Doenças Raras, crianças em Cuidados Paliativos e com deficiências.</p>
             </figcaption>
-            <Image src={'/placeholder-image.webp'} alt='Placeholder image' className='self-center pt-5 min-w-[300px] object-contain' width={50} height={50} />
+            <Image src={'/placeholder-image.png'} alt='Placeholder image' className='self-center pt-5 min-w-[300px] object-contain' width={50} height={50} />
           </figure>
         </section>
 
-        <section className='p-10'>
+        <section className='p-10 after:content-[url("/commas-close.svg")] after:block before:content-[url("/commas-open.svg")]  before:block before:relative before:top-28 before:right-3 after:relative after:-top-5 after:right-0 after:float-right'>
           <div className='p-3 bg-[#D9D9D9] text-[#494747] text-3xl m-auto w-min mb-5'>
             <h3>Depoimentos</h3>
           </div>
     
-            <div className='bg-[#CDBC24] h-52 w-full'></div>
+            <div className='bg-[#CDBC24] h-52 w-full overflow-hidden'></div>
         </section>
 
         <section className='bg-[#5C95D8] h-28 p-10'>
