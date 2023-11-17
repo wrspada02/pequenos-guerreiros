@@ -29,6 +29,7 @@ const config: Config = {
         'rubik': 'Rubik, sans-serif',
         'poppins': 'Poppins, sans-serif',
         'strait': 'Strait, sans-serif',
+        'roboto': 'Roboto, sans-serif',
       }
     },
     screens: {
