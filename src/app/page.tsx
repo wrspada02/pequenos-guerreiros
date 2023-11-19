@@ -1,5 +1,5 @@
 'use client'
-import { SliderHome } from '@/components/sliderHome';
+import { SliderHome } from '@/components/SliderHome';
 import Image from 'next/image'
 import React from 'react';
 
