@@ -1,4 +1,5 @@
 'use client'
+import { SliderHome } from '@/components/sliderHome';
 import Image from 'next/image'
 import React from 'react';
 
@@ -8,8 +9,8 @@ export default function Home() {
   const handleAddHeaderStyle = (event: Event) => {
     const scroll = document.documentElement.scrollTop;
     
-    if (scroll > 200) headerRef.current?.classList.add('!bg-black')
-    else headerRef.current?.classList.remove('!bg-black')
+    if (scroll > 0) headerRef.current?.classList.add('!bg-yellow-default')
+    else headerRef.current?.classList.remove('!bg-yellow-default')
   };
 
   React.useEffect(() => {
@@ -22,7 +23,7 @@ export default function Home() {
 
   return (
     <>
-      <header className='flex items-center justify-between py-8 px-12 bg-transparent fixed w-full transition-all' ref={headerRef}>
+      <header className='flex items-center justify-between py-8 px-12 bg-transparent fixed w-full transition-all z-50' ref={headerRef}>
         <figure className='flex items-center gap-3'>
           <Image src={'./logo.svg'} alt='Pequenos guerreiros logo aperto de mao e titulo escrito' width={50} height={50} />
           <figcaption className='text-white max-w-logo font-logo text-2xl font-bold mobile:text-base'>Pequenos Guerreiros</figcaption>
@@ -85,12 +86,11 @@ export default function Home() {
           </figure>
         </section>
 
-        <section className='p-10 after:content-[url("/commas-close.svg")] after:block before:content-[url("/commas-open.svg")]  before:block before:relative before:top-28 before:right-3 after:relative after:-top-5 after:right-0 after:float-right'>
-          <div className='p-3 bg-[#D9D9D9] text-[#494747] text-3xl m-auto w-min mb-5'>
+        <section className='p-10 after:z-20 before:z-20 after:content-[url("/commas-close.svg")] after:block before:content-[url("/commas-open.svg")]  before:block before:relative before:top-28 before:right-3 after:relative after:-top-5 after:right-0 after:float-right'>
+          <div className='p-3 bg-[#D9D9D9] text-[#494747] text-3xl m-auto w-min mb-5 max-h-[1000px]'>
             <h3>Depoimentos</h3>
           </div>
-    
-            <div className='bg-[#CDBC24] h-52 w-full overflow-hidden'></div>
+            <SliderHome />
         </section>
 
         <section className='bg-[#5C95D8] h-28 p-10'>
