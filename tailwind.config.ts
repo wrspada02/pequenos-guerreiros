@@ -31,6 +31,30 @@ const config: Config = {
         'strait': 'Strait, sans-serif',
         'roboto': 'Roboto, sans-serif',
       },
+      keyframes: {
+        'opacity-from-right': {
+          'from': { transform: 'translateX(500px)', opacity: '0' },
+          'to': { transform: 'translateX(0)', opacity: '1' },
+        },
+        'opacity': {
+          'from': { opacity: '0' },
+          'to': { opacity: '1' },
+        },
+        'opacity-from-top': {
+          'from': { transform: 'translateY(-500px)', opacity: '0' },
+          'to': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'opacity-from-bot': {
+          'from': { transform: 'translateY(500px)', opacity: '0' },
+          'to': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+      animation: {
+        'opacity-from-right': 'opacity-from-right 0.5s normal',
+        'opacity': 'opacity 1s ease-in-out',
+        'opacity-from-top': 'opacity-from-top 1s ease-in-out',
+        'opacity-from-bot': 'opacity-from-bot 1s ease-in-out',
+      },
     },
     screens: {
       'mobile': {
