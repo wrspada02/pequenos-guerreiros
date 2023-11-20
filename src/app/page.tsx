@@ -87,7 +87,7 @@ export default function Home() {
         </section>
 
         <section className='p-10 after:z-20 before:z-20 after:content-[url("/commas-close.svg")] after:block before:content-[url("/commas-open.svg")]  before:block before:relative before:top-28 before:right-3 after:relative after:-top-5 after:right-0 after:float-right'>
-          <div className='p-3 bg-[#D9D9D9] text-[#494747] text-3xl m-auto w-min mb-5 max-h-[1000px]'>
+          <div className='p-3 bg-[#D9D9D9] text-[#494747] text-3xl m-auto w-min mb-5'>
             <h3>Depoimentos</h3>
           </div>
             <SliderHome />

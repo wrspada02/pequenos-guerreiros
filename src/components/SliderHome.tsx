@@ -27,7 +27,7 @@ export function SliderHome() {
     return {
       id: `item-${index}`,
       renderItem: (
-        <div className='p-10 min-h-min'>
+        <div className='mobile:p-6 p-10 min-h-min'>
           <p className='text-white text-xl'>{value.paragraph}</p>
           <span className='block text-green-500 text-lg'>{value.ownerName}</span>
           <span className='block text-blue-500 text-lg'>{value.ownerTitle}</span>
@@ -41,11 +41,11 @@ export function SliderHome() {
   });
 
   return (
-    <div className='bg-yellow-default min-h-min overflow-hidden'>
+    <div className='bg-yellow-default min-h-min overflow-hidden cursor-grab'>
         {carouselFragment}
         <div className='flex items-center justify-center gap-x-5 mb-5'>
-          <button className='rounded-full bg-white p-5' onClick={slideToPrevItem}>Prev item</button>
-          <button className='rounded-full bg-white p-5' onClick={slideToNextItem}>Next item</button>
+          <button className='rounded-sm bg-white p-5' onClick={slideToPrevItem}>Anterior</button>
+          <button className='rounded-sm bg-white p-5' onClick={slideToNextItem}>Próximo</button>
         </div>
     </div>
   );

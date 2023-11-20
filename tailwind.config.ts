@@ -30,7 +30,7 @@ const config: Config = {
         'poppins': 'Poppins, sans-serif',
         'strait': 'Strait, sans-serif',
         'roboto': 'Roboto, sans-serif',
-      }
+      },
     },
     screens: {
       'mobile': {
