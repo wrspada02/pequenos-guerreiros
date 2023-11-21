@@ -41,11 +41,11 @@ const config: Config = {
           'to': { opacity: '1' },
         },
         'opacity-from-top': {
-          'from': { transform: 'translateY(-500px)', opacity: '0' },
+          'from': { transform: 'translateY(-100px)', opacity: '0' },
           'to': { transform: 'translateY(0)', opacity: '1' },
         },
         'opacity-from-bot': {
-          'from': { transform: 'translateY(500px)', opacity: '0' },
+          'from': { transform: 'translateY(100px)', opacity: '0' },
           'to': { transform: 'translateY(0)', opacity: '1' },
         },
       },
