@@ -24,13 +24,18 @@ export default function Home() {
   };
 
   const handleAddAnimationOpacity = () => {
-    const elements = document.querySelectorAll('.section-std');
+    const translateSections = document.querySelectorAll('.translate-section-std');
+    const opacitySections = document.querySelectorAll('.opacity-section-std');
 
-    elements.forEach((element, index) => {
+    translateSections.forEach((element, index) => {
       if (isInViewport(element)) {
-        index === 2 ? element.classList.add('animate-opacity-from-bot') : element.classList.add('animate-opacity-from-top');
+        index % 2 === 0 ? element.classList.add('animate-opacity-from-bot') : element.classList.add('animate-opacity-from-top');
       }
     });
+
+    opacitySections.forEach((element) => {
+      element.classList.add('animate-opacity')
+    })
   };
 
   React.useEffect(() => {
@@ -74,22 +79,24 @@ export default function Home() {
         </section>
 
         <section className='grid desktop:grid-cols-3 fullscreen:grid-cols-3 mobile:grid-cols-1 tablet:grid-cols-2 mobile:grid-rows-[0.5fr 1fr 0.5fr 1fr] tablet:grid-rows-[0.5fr 1fr 0.5fr 1fr] mobile:gap-y-10 tablet:gap-y-10 gap-x-5 p-10'>
-          <Image src={'/placeholder-image.png'} alt='Placeholder image' className='mobile:row-start-2 mobile:row-end-3 tablet:row-start-1 tablet:row-end-2 tablet:col-start-1 tablet:col-end-2 desktop:col-start-1 desktop:col-end-1 fullscreen:col-start-1 fullscreen:col-end-1 desktop:row-start-1 desktop:row-end-3 fullscreen:row-start-1 fullscreen:row-end-3 w-1/2 h-full object-cover desktop:self-center fullscreen:self-center m-auto' width={50} height={50} />
+          <Image src={'/image-1.jpg'} alt='Imagem pequenos guerreiros em pose para foto com seus colaboradores em um ambiente sádio' className='mobile:row-start-2 mobile:row-end-3 tablet:row-start-1 tablet:row-end-2 tablet:col-start-1 tablet:col-end-2 desktop:col-start-1 desktop:col-end-1 fullscreen:col-start-1 fullscreen:col-end-1 desktop:row-start-1 desktop:row-end-3 fullscreen:row-start-1 fullscreen:row-end-3 tablet:w-full desktop:w-3/4 fullscreen:w-3/4 h-full object-contain desktop:self-center fullscreen:self-center m-auto opacity-section-std' width={300} height={300} />
 
-          <Image src={'/placeholder-image.png'} alt='Placeholder image' className='mobile:row-start-4 mobile:row-end-5 tablet:row-start-2 tablet:row-end-3 tablet:col-start-1 tablet:col-end-2 desktop:col-start-2 desktop:col-end-3 fullscreen:col-start-2 fullscreen:col-end-3 desktop:row-start-1 desktop:row-end-2 fullscreen:row-start-1 fullscreen:row-end-2 mobile:pt-0 tablet:pt-0 w-1/2 h-full object-cover m-auto' width={50} height={50} />
+          <Image src={'/image-2.jpg'} alt='Imagem pequenos guerreiros em pose para foto com seus colaboradores em um ambiente sádio' className='mobile:row-start-4 mobile:row-end-5 tablet:row-start-2 tablet:row-end-3 tablet:col-start-1 tablet:col-end-2 desktop:col-start-2 desktop:col-end-3 fullscreen:col-start-2 fullscreen:col-end-3 desktop:row-start-1 desktop:row-end-2 fullscreen:row-start-1 fullscreen:row-end-2 tablet:w-full desktop:w-3/4 fullscreen:w-3/4 mobile:pt-0 tablet:pt-0 h-full object-contain m-auto opacity-section-std' width={300} height={300} />
 
-          <article className='text-white mobile:row-start-1 mobile:row-end-2 tablet:row-start-1 tablet:row-end-2 tablet:col-start-2 tablet:col-end-3 desktop:col-start-3 desktop:col-end-4 fullscreen:col-start-3 fullscreen:col-end-4 desktop:row-start-1 desktop:row-end-2 fullscreen:row-start-1 fullscreen:row-end-2 section-std'>
+          <article className='text-white mobile:row-start-1 mobile:row-end-2 tablet:row-start-1 tablet:row-end-2 tablet:col-start-2 tablet:col-end-3 desktop:col-start-3 desktop:col-end-4 fullscreen:col-start-3 fullscreen:col-end-4 desktop:row-start-1 desktop:row-end-2 fullscreen:row-start-1 fullscreen:row-end-2 translate-section-std'>
             <div className='bg-green-default p-8 mobile:p-3 tablet:p-4 max-w-sm'>
               <h3 className='text-3xl font-semibold'>Nossa Missão</h3>
             </div>
-            <p className='pl-5 mobile:pl-0 tablet:pl-0 pt-3 text-black text-xl mobile:text-base tablet:lg'>Estamos sempre na busca da felicidade na vida dos pequenos guerreiros, trazendo brincadeiras, divertindo, buscando entretenimento e o saber</p>
+            <p className='pl-5 mobile:pl-0 tablet:pl-0 pt-3 text-black text-xl mobile:text-base tablet:lg'>No pequenos guerreiros, nossa missão transcende os limites da compaixão e se torna um compromisso inabalável com o bem-estar das crianças em estado paliativo de câncer. Estamos dedicados a oferecer conforto, apoio e amor a essas crianças corajosas e às suas famílias, durante uma jornada que muitas vezes desafia a compreensão humana.</p>
+            <p className='pl-5 mobile:pl-0 tablet:pl-0 pt-3 text-black text-xl mobile:text-base tablet:lg'>Acreditamos que cada momento é precioso e que, mesmo diante das adversidades mais difíceis, podemos fazer a diferença na vida de uma criança. Nossa missão é proporcionar não apenas cuidados especializados, mas também momentos de alegria, esperança e dignidade. Trabalhamos incansavelmente para contribuir com a felicidade, promover a qualidade de vida e construir memórias valiosas que ficarão gravadas nos corações de todos que tocamos.</p>
           </article>
 
-          <article className='text-white mobile:pt-0 tablet:pt-0 pt-20 mobile:row-start-3 mobile:row-end-4 tablet:row-start-2 tablet:row-end-3 tablet:col-start-2 tablet:col-end-3 desktop:col-start-3 desktop:col-end-4 fullscreen:col-start-3 fullscreen:col-end-4 desktop:row-start-2 desktop:row-end-3 fullscreen:row-start-2 fullscreen:row-end-3 section-std'>
+          <article className='text-white mobile:pt-0 tablet:pt-0 pt-20 mobile:row-start-3 mobile:row-end-4 tablet:row-start-2 tablet:row-end-3 tablet:col-start-2 tablet:col-end-3 desktop:col-start-3 desktop:col-end-4 fullscreen:col-start-3 fullscreen:col-end-4 desktop:row-start-1 desktop:row-end-2 fullscreen:row-start-1 fullscreen:row-end-2 desktop:pt-[550px] fullscreen:pt-[550px] translate-section-std'>
             <div className='bg-yellow-default p-8 mobile:p-3 tablet:p-4 max-w-sm'>
               <h3 className='text-3xl font-semibold'>O que acreditamos</h3>
             </div>
-            <p className='pl-5 pt-3  mobile:pl-0 tablet:pl-0 text-black text-xl mobile:text-base tablet:lg'>Acreditamos que o amor e o cuidado são essenciais nas relações com nossos pequenos. Além disso, a diversão e uma boa recepção são um afeto para que possamos ter um ambiente saudável e colaborativo e nossos pequenos se sintam bem.</p>
+            <p className='pl-5 pt-3  mobile:pl-0 tablet:pl-0 text-black text-xl mobile:text-base tablet:lg'>Acreditamos na importância de proporcionar um ambiente seguro e acolhedor, onde as crianças possam explorar, aprender e simplesmente ser crianças, independentemente das limitações impostas pela doença. Acreditamos na empatia como um catalisador para a cura emocional e na esperança como uma luz guia.</p>
+            <p className='pl-5 pt-3  mobile:pl-0 tablet:pl-0 text-black text-xl mobile:text-base tablet:lg'>No pequenos guerreiros, acreditamos firmemente que, ao unir nossos esforços e corações, podemos construir um mundo onde o amor triunfa sobre a dor, a esperança ilumina os momentos desafiadores, e cada criança em estado paliativo de câncer descobre conforto e alegria em cada instante.</p>
           </article>
         </section>
 
@@ -98,13 +105,13 @@ export default function Home() {
             <h3 className='font-poppins text-white text-4xl font-semibold mobile:w-full tablet:w-full mobile:text-center tablet:text-center'>Nossa história</h3>
           </div>
 
-          <figure className='flex flex-1 justify-between gap-x-10 mobile:flex-col tablet:flex-col section-std'>
+          <figure className='flex flex-1 justify-between gap-x-10 mobile:flex-col tablet:flex-col translate-section-std'>
             <figcaption className='text-white font-roboto mobile:text-lg tablet:text-xl text-2xl flex flex-col gap-y-5 pt-5'>
               <p>O trabalho teve início em outubro de 2014. Surgiu então a ideia de proporcionar às crianças em tratamento contra o câncer o sentimento de que poderiam, de fato, terem uma vida social, facilitando à criança enferma, de forma lúdica, a expressão e compreensão de suas necessidades, sejam elas físicas ou psicológicas.</p>
               <p>Logo em 2016, surgiu uma oportunidade de apadrinhar uma criança com Doença Rara, onde o projeto passou a integrar crianças portadoras de doenças raras e acolher todos familiares.</p>
               <p>E em 2019, enfim nasceu “Pequenos Guerreiros” (Associação Príncipes e Princesas da Quimioterapia e Doenças Raras), que apoia e desenvolve ações para o lazer, saúde e a defesa, elevação e manutenção da qualidade de vida do ser humano, atendendo meninas e meninos entre 0 a 16 anos de idade, com qualquer tipo de Neoplasia (Câncer), portadoras de Doenças Raras, crianças em Cuidados Paliativos e com deficiências.</p>
             </figcaption>
-            <Image src={'/placeholder-image.png'} alt='Placeholder image' className='self-center pt-5 min-w-[300px] object-contain' width={50} height={50} />
+            <Image src={'/image-3.jpg'} alt='Imagem pequeno guerreiro e seus 2 colaboradores para um foto, uma delas segura um presente embrulhado' className='self-center pt-5 min-w-[300px] object-contain opacity-section-std' width={340} height={500} />
           </figure>
         </section>
 
